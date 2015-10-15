@@ -183,8 +183,7 @@ knife digital_ocean sshkey list
 ### Upload your recipes to Chef.io (chef-server)
 
 ```sh
-librarian-chef update
-knife cookbook upload --all
+(librarian-chef update) && (knife cookbook upload --all)
 ```
 
 and check
@@ -199,7 +198,7 @@ knife digital_ocean droplet create \
   --image debian-8-x64 \
   --location ams3 \
   --size 512mb \
-  --ssh-keys 1519548 \
+  --ssh-keys 1519722 \
   --run-list "recipe[hakushu_app]" \
   --bootstrap
 ```
@@ -234,6 +233,14 @@ knife client list
 knife client delete hakushu.io -y
 ```
 
+**Working with ssh keys**
+
+```sh
+knife digital_ocean sshkey list
+knife digital_ocean sshkey destroy -i 1519548
+
+```
+
 **Re-run recipes**
 
 ```sh
@@ -247,6 +254,7 @@ knife client delete hakushu.io -y
 ```sh
 knife digital_ocean sshkey list
 knife digital_ocean sshkey destroy -i 1516629
+knife digital_ocean sshkey create -n do_ssh_key -i ~/.ssh/id_rsa.pub
 ```
 
 **Create role**
