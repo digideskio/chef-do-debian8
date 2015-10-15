@@ -1,0 +1,8 @@
+PATH
+  remote: ./cookbooks_app/hakushu_app
+  specs:
+    hakushu_app (0.1.0)
+
+DEPENDENCIES
+  hakushu_app (>= 0)
+

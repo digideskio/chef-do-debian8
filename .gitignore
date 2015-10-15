@@ -1,0 +1,17 @@
+.vagrant
+
+# Bundler
+bin/*
+.bundle/*
+
+.kitchen/
+.kitchen.local.yml
+
+.chef
+
+chef-solo
+cookbooks
+tmp
+
+# OS
+.DS_Store

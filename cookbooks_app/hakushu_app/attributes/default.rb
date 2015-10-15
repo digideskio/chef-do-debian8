@@ -1,0 +1,1 @@
+default['hakushu']['db_user_password'] = 'qwerty12345'
